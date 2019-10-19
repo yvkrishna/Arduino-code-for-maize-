@@ -26,6 +26,7 @@ void setup() {
 }
 
 void loop() {
+    
     // Clears the trigPin
     digitalWrite(trigPin1, LOW);
     delayMicroseconds(2);
