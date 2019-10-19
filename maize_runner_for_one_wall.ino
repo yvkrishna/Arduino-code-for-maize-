@@ -3,6 +3,7 @@ const int echoPin1 = 10;
 const int trigPin2 = 7;
 const int echoPin2 = 8;
 // defines variables
+
 long duration1;
 int distance1;
 long duration2;
