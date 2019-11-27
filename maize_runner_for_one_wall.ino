@@ -15,6 +15,11 @@ void foreward();
 void backward();
 void left();
 
+int motorpin1=2;
+int motorpin2=3;
+int motorpin3=4;
+int motorpin4=5;
+
 void uturn();
 
 void setup() {
@@ -22,6 +27,10 @@ void setup() {
     pinMode(echoPin1, INPUT); // Sets the echoPin as an Input
     pinMode(trigPin2, OUTPUT); // Sets the trigPin as an Output
     pinMode(echoPin2, INPUT); // Sets the echoPin as an Input
+    pinMode(motorpin1, OUTPUT);
+    pinMode(motorpin2, OUTPUT); 
+    pinMode(motorpin3, OUTPUT);
+    pinMode(motorpin4, OUTPUT);
     Serial.begin(9600); // Starts the serial communication
 }
 
@@ -80,22 +89,34 @@ void check(int d1,int d2)
 
 void right()
 { 
-   // write the 5-6 lines of code
+  digitalWrite(motorpin1, HIGH);
+  digitalWrite(motorpin2, LOW);
+  digitalWrite(motorpin3, LOW);
+  digitalWrite(motorpin4, HIGH);
 }
 
 void foreward()
 {
-  // write the 5-6 lines of code
+  digitalWrite(motorpin1, HIGH);
+  digitalWrite(motorpin2, LOW);
+  digitalWrite(motorpin3, HIGH);
+  digitalWrite(motorpin4, LOW);
 }
 
 void left()
 { 
-   // write the 5-6 lines of code
+  digitalWrite(motorpin1, LOW);
+  digitalWrite(motorpin2, HIGH);
+  digitalWrite(motorpin3, HIGH);
+  digitalWrite(motorpin4, LOW);
 }
 
 void backward()
 {
-  // write the 5-6 lines of code
+  digitalWrite(motorpin1, LOW);
+  digitalWrite(motorpin2, HIGH);
+  digitalWrite(motorpin3, LOW);
+  digitalWrite(motorpin4, HIGH);
 }
 
 
